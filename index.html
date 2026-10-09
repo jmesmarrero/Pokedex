@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="contenedor">
+    <h1 class="titulo">
+      <img class="titulo__bola"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="">
+      <img class="titulo__bola"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png" alt="">
+      <span class="titulo__texto">
+        <span class="titulo__nombre">George's</span>
+        <span class="titulo__pokedex">POKÉDEX</span>
+      </span>
+      <img class="titulo__bola"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png" alt="">
+      <img class="titulo__bola"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png" alt="">
+    </h1>
+
+   
+
+    <form id="formulario-busqueda" class="buscador">
+      <label for="busqueda">Name or number</label>
+
+      <div class="buscador__controles">
+        <input id="busqueda" name="busqueda" type="text" placeholder="Example: pikachu, char or 25" autocomplete="off">
+        <button type="button" id="boton-cargar">Load Pokémon</button>
+
+
+      </div>
+
+      <div id="filtro-tipos" class="tipos-filtro" role="group" aria-label="Filter by type"></div>
+    </form>
+
+    <p id="mensaje" class="mensaje" aria-live="polite"></p>
+
+    <section id="resultado" class="resultado"></section>
+ 
+
+    <dialog id="panel-detalles" class="panel" aria-labelledby="panel-titulo">
+      <button type="button" class="panel__cerrar" aria-label="Close details">✕</button>
+      <div id="panel-contenido"></div>
+    </dialog>
+
+  </main>
+  <script src="js/Pokemon.js"></script> <!-- clase pokemon-->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
